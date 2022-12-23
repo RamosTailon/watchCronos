@@ -1,10 +1,11 @@
 import styles from './Home.module.css'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
 const Home = () => {
-	const duration = 1 * 60
+	const duration = 2 * 60 //in milliseconds
 	const [totalTimeInSeconds, setTotalTimeInSeconds] = useState(duration);
 
 	const minutes = Math.floor(totalTimeInSeconds / 60);
@@ -41,7 +42,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className={styles.editZone}>
-				<button className={styles.btn_edit}>Editar</button>
+				<Link to='/edit' className={styles.btn_edit}>Editar </Link>
 				<button className={styles.btn_playPause} > Play / Pause</button>
 			</div>
 
