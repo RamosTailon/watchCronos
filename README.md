@@ -2,7 +2,7 @@
 
 Este é um projeto de Cronômetro que possui um background de fundo totalmente personalizável. 
 
-## Ideal para criar expectativa antes de algumas apresentações
+### Ideal para criar expectativa antes de algumas apresentações
 
 as TECNOLOGIAS usadas foram:
 
