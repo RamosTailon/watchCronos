@@ -19,5 +19,6 @@ Lista de tarefas:
 - [x] Criar função de cronometro na Home.
 - [x] Estruturar .jsx da Edit Page.
 - [x] Montar o Formulário da Edit Page.
+- [ ] Estruturar saída de informações do Formulário
 - [ ] Criar contexto de informações do formulário.
 - [ ] Linkar as informações de contexto entre páginas.
