@@ -1,5 +1,98 @@
-#test {
-    width: 100px;
-    height: 100px;
-    background-color: red;
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 30px 0 15px 0;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content label {
+    margin-right: 20px;
+}
+
+.main_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_input label {
+    margin: 10px 0;
+}
+
+#legenda {
+    margin-right: 20px;
+}
+
+.second_input {
+    display: flex;
+}
+
+.second_input h6 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.minutes,
+.seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dois_pontos {
+    margin: 0 20px;
+}
+
+#minutos,
+#segundos {
+    width: 2em;
+}
+
+.spectrum_map {
+    display: flex;
+    align-items: center;
+}
+
+.spectrum_map input {
+    height: 2em;
+    margin-right: 15px;
+}
+
+.spectrum_map p {
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+}
+
+.other_input {
+    margin: 10px 0;
+}
+
+.submit {
+    margin: 10px auto 0 auto;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #5CB85C;
+    color: white;
+    border: none;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #1e5c1e;
 }
