@@ -3,9 +3,19 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
+//USECONTEXT
+import { useContext } from 'react';
+import { SettingsWatchContext } from '../context/HookUseContext'
+
 
 const Home = () => {
-	const duration = 2 * 60 //in milliseconds
+	//CONTEXT
+	const { watchState } = useContext(SettingsWatchContext)
+
+	//TIMER
+	const duration = parseInt(watchState.minutes) * 60 + parseInt(watchState.seconds) //in seconds
+	// console.log(watchState.minutes)
+
 	const [totalTimeInSeconds, setTotalTimeInSeconds] = useState(duration);
 
 	const minutes = Math.floor(totalTimeInSeconds / 60);
@@ -16,22 +26,21 @@ const Home = () => {
 		if (totalTimeInSeconds === 0) {
 			return
 		} else {
-			setTimeout(() => {
+			const timer = setTimeout(() => {
 				setTotalTimeInSeconds(totalTimeInSeconds - 1)
 			}, 1000)
 		}
 
-
+		// return () => clearTimeout(timer) //Cleanup não é necessário
 
 	}, [totalTimeInSeconds]);
-
-
+	// console.log(watchState.minutes + ', ' + watchState.seconds)
 	return (
 		<div className={styles.container}>
 			<video src='/VIDEOS/VIDEO 1.mp4' autoPlay loop muted />
 			<div className={styles.controls}>
 				<div className={styles.slogan}>
-					<p>Está para começar!</p>
+					<p>{watchState.text}</p>
 				</div>
 				<div className={styles.content}>
 					<div className={styles.timer}>

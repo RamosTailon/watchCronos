@@ -4,6 +4,8 @@
     font-family: 'Poppins', sans-serif;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: #fff;
+    height: 100vh;
 }
 
 .container h1 {

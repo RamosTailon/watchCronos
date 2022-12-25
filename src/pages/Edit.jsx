@@ -1,9 +1,18 @@
+//STATES
 import { useState, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
+//CSS
 import styles from './Edit.module.css'
 
+//USECONTEXT
+import { useContext } from 'react';
+import { SettingsWatchContext } from '../context/HookUseContext'
+
+
 const Edit = () => {
+  //CONTEXT
+  const { watchState, setWatchState } = useContext(SettingsWatchContext)
 
   //STATES
   const [text, setText] = useState('');
@@ -20,16 +29,19 @@ const Edit = () => {
   const navigate = useNavigate()
 
   //FUNCTIONS
-
   const handleSubmit = (e) => {
     e.preventDefault()
     navigate('/')
-    console.log(text)
-    console.log(minutes)
-    console.log(seconds)
-    console.log(fileVideo)
-    console.log(color)
-    console.log(font)
+
+    setWatchState({
+      text: text,
+      minutes: minutes,
+      seconds: seconds,
+      fileVideo: fileVideo,
+      color: color,
+      font: font
+    })
+
   }
   return (
     <div className={styles.container}>
@@ -121,6 +133,7 @@ const Edit = () => {
 
         <button type="submit" className={styles.submit}>Atualizar</button>
       </form>
+      <h3>{watchState && watchState.text}</h3>
     </div>
   )
 }
