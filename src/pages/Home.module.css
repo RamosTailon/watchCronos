@@ -1,5 +1,5 @@
 :root {
-    --color-btn: red;
+    --color-btn: rgba(128, 0, 128,1);
     --color-btn-hover: green;
 
     --color-text-btn: white;
@@ -43,7 +43,7 @@
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 50px;    
 }
 
 .slogan p {
@@ -51,6 +51,7 @@
     background-color: var(--color-btn);
     border-radius: 10px;
     color: var(--color-text-btn);
+    opacity: 2;
 }
 
 .content {

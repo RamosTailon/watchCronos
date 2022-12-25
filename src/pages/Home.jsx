@@ -41,7 +41,8 @@ const Home = () => {
 					{watchState.text && <p
 						style={{
 							backgroundColor: watchState.color,
-							fontFamily: watchState.font
+							fontFamily: watchState.font,
+
 						}}
 					>{watchState.text}</p>}
 				</div>

@@ -20,9 +20,11 @@ Lista de tarefas:
 - [x] Criar função de cronometro na Home.
 - [x] Estruturar .jsx da Edit Page.
 - [x] Montar o Formulário da Edit Page.
-- [x] Estruturar saída de informações do Formulário
+- [x] Estruturar saída de informações do Formulário.
 - [x] Criar contexto de informações do formulário.
-- [ ] Criar a função de play e pause
-- [ ] Configurar vídeo de fundo
-- [ ] Função de filtro de vídeo
+- [ ] Animação de cor nos 10 segundos finais.
+- [ ] Opção de texto em caixa alta.
+- [ ] Criar a função de play e pause.
+- [ ] Configurar vídeo de fundo.
+- [ ] Função de filtro de vídeo.
 - [ ] Linkar as informações de contexto entre páginas.

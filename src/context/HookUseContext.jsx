@@ -11,8 +11,9 @@ export const HookUseContext = ({ children }) => {
 		minutes: 1,
 		seconds: 30,
 		fileVideo: "/video/*",
-		color: "purple",
-		font: "Verdana"
+		color: "#800080",
+		font: "Verdana",
+		opacityColor: 1
 	};
 
 	const [watchState, setWatchState] = useState(contextValue);

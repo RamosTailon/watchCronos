@@ -22,14 +22,14 @@ const Edit = () => {
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
   const [fileVideo, setFileVideo] = useState();
-  const [color, setColor] = useState('purple');
+  const [color, setColor] = useState('#800080');
   const [font, setFont] = useState('Poppins, sans-serif');
   const font1 = 'Poppins, sans-serif';
   const font2 = 'Courier New, Courier, monospace';
   const font3 = 'Helvetica';
+  const [opacityColor, setOpacityColor] = useState(0.5);
 
   const [upper, setUpper] = useState(false);
-  const [opacityColor, setOpacityColor] = useState(0.5);
 
 
   const navigate = useNavigate()
@@ -39,7 +39,18 @@ const Edit = () => {
     return phrase.toUpperCase()
   }
 
-  // const
+  function hexToRgba(hex) {
+    const twoDigitGroup = hex.match(/([0-9a-f]){2}/gi)
+
+    let rgbArr = []
+    for (let i = 0; i < 3; i++) {
+      rgbArr.push(parseInt(twoDigitGroup[i], 16))
+    }
+    return rgbArr
+  }
+
+  const varHex = hexToRgba(color)
+  const hexColor = `rgb(${varHex},${opacityColor})`
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -50,10 +61,13 @@ const Edit = () => {
       minutes: minutes,
       seconds: seconds,
       fileVideo: fileVideo,
-      color: color,
-      font: font
+      color: hexColor,
+      font: font,
+      opacityColor: opacityColor
     })
   }
+
+
   return (
     <div className={styles.container}>
       <h1>Edição de páginas</h1>
@@ -117,13 +131,6 @@ const Edit = () => {
               type="color"
               name="picker"
               id={styles.picker}
-              onChange={(e) => setColor(e.target.value)}
-            />
-            <input
-              type="text"
-              name="color_hex"
-              id={styles.color_hex}
-              placeholder="Digite a cor em Hexadecimal"
               onChange={(e) => setColor(e.target.value)}
             />
             <p style={{
