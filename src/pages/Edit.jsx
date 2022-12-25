@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom"
 //CSS
 import styles from './Edit.module.css'
 
+//STYLED-COMPONENTS
+import Slider from "../components/Slider";
+
 //USECONTEXT
 import { useContext } from 'react';
 import { SettingsWatchContext } from '../context/HookUseContext'
@@ -15,17 +18,18 @@ const Edit = () => {
   const { watchState, setWatchState } = useContext(SettingsWatchContext)
 
   //STATES
-  const [text, setText] = useState('');
+  const [text, setText] = useState('frase aqui');
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
   const [fileVideo, setFileVideo] = useState();
-  const [color, setColor] = useState('');
+  const [color, setColor] = useState('purple');
   const [font, setFont] = useState('Poppins, sans-serif');
   const font1 = 'Poppins, sans-serif';
   const font2 = 'Courier New, Courier, monospace';
   const font3 = 'Helvetica';
 
   const [upper, setUpper] = useState(false);
+  const [opacityColor, setOpacityColor] = useState(0.5);
 
 
   const navigate = useNavigate()
@@ -122,7 +126,20 @@ const Edit = () => {
               placeholder="Digite a cor em Hexadecimal"
               onChange={(e) => setColor(e.target.value)}
             />
-            <p style={{ backgroundColor: color }}></p>
+            <p style={{
+              backgroundColor: color,
+              opacity: opacityColor
+            }}></p>
+            <Slider
+              color={color}
+              type="range"
+              min="0"
+              max="1"
+              value={opacityColor}
+              step="0.1"
+              id={styles.range_opacity}
+              onChange={(e) => setOpacityColor(e.target.value)}
+            />
           </div>
         </div>
         <div className={styles.other_input}>
@@ -137,7 +154,7 @@ const Edit = () => {
             <option value={font3}>Fonte 3</option>
           </select>
         </div>
-        <h3 style={{ fontFamily: font }}>{text}</h3>
+        <h3 id={styles.subtitle} style={{ fontFamily: font }}>{text}</h3>
 
         <button type="submit" className={styles.submit}>Atualizar</button>
       </form>

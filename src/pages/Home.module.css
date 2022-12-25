@@ -107,7 +107,5 @@ a {
     transform: translateX(-20px);
 }
 
-.editZone button:hover,
-a:hover {
-    background-color: var(--color-btn-hover);
-}
+/* hover button
+    opacity: 1; */

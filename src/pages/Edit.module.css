@@ -89,7 +89,7 @@
     font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: #5CB85C;
+    background-color: #187418;
     color: white;
     border: none;
     transition: .4s;
@@ -97,5 +97,13 @@
 }
 
 .submit:hover {
-    background-color: #1e5c1e;
+    background-color: #41c441;
+}
+
+#subtitle {
+    text-align: center;
+    color: #4d4d4dff;
+    border: 1px #4d4d4dff solid;
+    margin: 0;
+    padding: 10px 0;
 }

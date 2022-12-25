@@ -10,6 +10,7 @@ as TECNOLOGIAS usadas foram:
 * React Router V6
 * yarn
 * vite (BUILD)
+* styled-components //css escopado
 
 --------------------------------------------------------------
 Lista de tarefas:

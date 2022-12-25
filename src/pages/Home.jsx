@@ -53,7 +53,7 @@ const Home = () => {
 						}}>
 						<span>{minutes.toString().padStart(2, "0")}</span>
 						<span>:</span>
-						<span>{seconds.toString().padStart(2, "0")}</span>
+						<span >{seconds.toString().padStart(2, "0")}</span>
 					</div>
 				</div>
 			</div>
