@@ -22,13 +22,21 @@ const Edit = () => {
   const [color, setColor] = useState('');
   const [font, setFont] = useState('Poppins, sans-serif');
   const font1 = 'Poppins, sans-serif';
-  const font2 = 'Verdana, sans-serif';
-  const font3 = 'Segoe UI, sans-serif';
+  const font2 = 'Courier New, Courier, monospace';
+  const font3 = 'Helvetica';
+
+  const [upper, setUpper] = useState(false);
 
 
   const navigate = useNavigate()
 
   //FUNCTIONS
+  const UpperCase = (phrase) => {
+    return phrase.toUpperCase()
+  }
+
+  // const
+
   const handleSubmit = (e) => {
     e.preventDefault()
     navigate('/')
@@ -41,7 +49,6 @@ const Edit = () => {
       color: color,
       font: font
     })
-
   }
   return (
     <div className={styles.container}>
@@ -115,7 +122,7 @@ const Edit = () => {
               placeholder="Digite a cor em Hexadecimal"
               onChange={(e) => setColor(e.target.value)}
             />
-            <p id={styles.test}></p>
+            <p style={{ backgroundColor: color }}></p>
           </div>
         </div>
         <div className={styles.other_input}>
@@ -130,10 +137,10 @@ const Edit = () => {
             <option value={font3}>Fonte 3</option>
           </select>
         </div>
+        <h3 style={{ fontFamily: font }}>{text}</h3>
 
         <button type="submit" className={styles.submit}>Atualizar</button>
       </form>
-      <h3>{watchState && watchState.text}</h3>
     </div>
   )
 }

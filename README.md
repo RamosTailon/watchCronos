@@ -22,4 +22,6 @@ Lista de tarefas:
 - [x] Estruturar saída de informações do Formulário
 - [x] Criar contexto de informações do formulário.
 - [ ] Criar a função de play e pause
+- [ ] Configurar vídeo de fundo
+- [ ] Função de filtro de vídeo
 - [ ] Linkar as informações de contexto entre páginas.
