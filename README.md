@@ -23,7 +23,7 @@ Lista de tarefas:
 - [x] Estruturar saída de informações do Formulário.
 - [x] Criar contexto de informações do formulário.
 - [x] Opção de texto em caixa alta.
-- [ ] Animação de cor nos 10 segundos finais.
-- [ ] Criar a função de play e pause.
+- [x] Configurar vídeo de fundo.
 - [ ] Função de filtro de vídeo.
-- [ ] Configurar vídeo de fundo.
+- [ ] Animação de cor nos 10 segundos finais.
+- [ ] Criar a função de play e pause do cronômetro.

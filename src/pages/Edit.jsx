@@ -38,15 +38,6 @@ const Edit = () => {
   const navigate = useNavigate()
 
   //FUNCTIONS
-  // const UpperCase = UpperCase(phrase) => {
-  //   if (upper) {
-  //     return phrase.toUpperCase()
-  //   } else {
-  //     return phrase
-  //   }
-  // }
-
-  //console.log(UpperCase(text))
 
 
   function hexToRgba(hex) {
@@ -54,7 +45,7 @@ const Edit = () => {
 
     let rgbArr = []
     for (let i = 0; i < 3; i++) {
-      rgbArr.push(parseInt(twoDigitGroup[i], 16))
+      rgbArr.push(parseInt(twoDigitGroup[i], 16))//deixa o numero na base 16
     }
     return rgbArr
   }
@@ -78,6 +69,21 @@ const Edit = () => {
     })
   }
 
+
+  function renderVideo(e) {
+    // setFileVideo(e.target.files[0])
+
+    const file = e.target.files[0]
+    const reader = new FileReader();
+
+    reader.addEventListener('load', function (e) {
+      const readerTarget = e.target
+      const source = readerTarget.result
+      setFileVideo(source)
+    })
+
+    reader.readAsDataURL(file)
+  }
 
   return (
     <div className={styles.container}>
@@ -134,7 +140,7 @@ const Edit = () => {
             name="file"
             id="file"
             accept="video/*"
-            onChange={(e) => setFileVideo(e.target.value)}
+            onChange={renderVideo}
           />
         </div>
         <div className={styles.other_input}>

@@ -36,16 +36,19 @@ const Home = () => {
 		// return () => clearTimeout(timer) //Cleanup não é necessário
 
 	}, [totalTimeInSeconds]);
+
+	useEffect(() => {
+		console.log(watchState.fileVideo)
+	}, []);
 	return (
 		<div className={styles.container}>
-			<video src='/VIDEOS/VIDEO 1.mp4' autoPlay loop muted />
+			<video src={watchState.fileVideo} autoPlay loop muted />
 			<div className={styles.controls}>
 				<div className={styles.slogan}>
 					{watchState.text && <p
 						style={{
 							backgroundColor: watchState.color,
 							fontFamily: watchState.font,
-
 						}}
 					>{UpperCase(watchState.text, watchState.upper)}</p>}
 				</div>

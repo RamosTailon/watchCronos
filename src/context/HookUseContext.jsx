@@ -10,7 +10,7 @@ export const HookUseContext = ({ children }) => {
 		text: 'Vamos adorar',
 		minutes: 1,
 		seconds: 30,
-		fileVideo: "/video/*",
+		fileVideo: "VIDEOS/VIDEO 2.mp4",
 		color: "#800080",
 		font: "Verdana",
 		opacityColor: 1,
