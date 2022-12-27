@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { SettingsWatchContext } from '../context/HookUseContext'
 
+//UTILS
+import UpperCase from '../utils/UpperCase';
+
 
 const Home = () => {
 	//CONTEXT
@@ -44,7 +47,7 @@ const Home = () => {
 							fontFamily: watchState.font,
 
 						}}
-					>{watchState.text}</p>}
+					>{UpperCase(watchState.text, watchState.upper)}</p>}
 				</div>
 				<div className={styles.content}>
 					<div className={styles.timer}

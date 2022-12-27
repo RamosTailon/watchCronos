@@ -22,9 +22,8 @@ Lista de tarefas:
 - [x] Montar o Formulário da Edit Page.
 - [x] Estruturar saída de informações do Formulário.
 - [x] Criar contexto de informações do formulário.
+- [x] Opção de texto em caixa alta.
 - [ ] Animação de cor nos 10 segundos finais.
-- [ ] Opção de texto em caixa alta.
 - [ ] Criar a função de play e pause.
-- [ ] Configurar vídeo de fundo.
 - [ ] Função de filtro de vídeo.
-- [ ] Linkar as informações de contexto entre páginas.
+- [ ] Configurar vídeo de fundo.

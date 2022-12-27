@@ -12,6 +12,9 @@ import Slider from "../components/Slider";
 import { useContext } from 'react';
 import { SettingsWatchContext } from '../context/HookUseContext'
 
+//UTILS
+import UpperCase from "../utils/UpperCase";
+
 
 const Edit = () => {
   //CONTEXT
@@ -35,9 +38,16 @@ const Edit = () => {
   const navigate = useNavigate()
 
   //FUNCTIONS
-  const UpperCase = (phrase) => {
-    return phrase.toUpperCase()
-  }
+  // const UpperCase = UpperCase(phrase) => {
+  //   if (upper) {
+  //     return phrase.toUpperCase()
+  //   } else {
+  //     return phrase
+  //   }
+  // }
+
+  //console.log(UpperCase(text))
+
 
   function hexToRgba(hex) {
     const twoDigitGroup = hex.match(/([0-9a-f]){2}/gi)
@@ -63,7 +73,8 @@ const Edit = () => {
       fileVideo: fileVideo,
       color: hexColor,
       font: font,
-      opacityColor: opacityColor
+      opacityColor: opacityColor,
+      upper: upper
     })
   }
 
@@ -79,7 +90,9 @@ const Edit = () => {
             name="legenda"
             id={styles.legenda}
             placeholder="Digite a legenda"
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) =>
+              setText(e.target.value)
+            }
           />
           <label htmlFor="time">Cronometro:</label>
           <div className={styles.second_input}>
@@ -161,7 +174,11 @@ const Edit = () => {
             <option value={font3}>Fonte 3</option>
           </select>
         </div>
-        <h3 id={styles.subtitle} style={{ fontFamily: font }}>{text}</h3>
+        <h3 id={styles.subtitle} style={{ fontFamily: font }}>{UpperCase(text, upper)}</h3>
+        <div className="maiúsculo">
+          <input type="checkbox" name="maiúsculo" id="maiúsculo" onChange={(e) => setUpper(e.target.checked)} /> <label htmlFor="maiúsculo"> Maiúsculo</label>
+        </div>
+
 
         <button type="submit" className={styles.submit}>Atualizar</button>
       </form>
