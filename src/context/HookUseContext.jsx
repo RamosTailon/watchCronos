@@ -14,7 +14,8 @@ export const HookUseContext = ({ children }) => {
 		color: "#800080",
 		font: "Verdana",
 		opacityColor: 1,
-		upper: false
+		upper: false,
+		filter: false
 	};
 
 	const [watchState, setWatchState] = useState(contextValue);

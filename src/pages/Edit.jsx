@@ -31,6 +31,7 @@ const Edit = () => {
   const font2 = 'Courier New, Courier, monospace';
   const font3 = 'Helvetica';
   const [opacityColor, setOpacityColor] = useState(0.5);
+  const [filter, setFilter] = useState(false);
 
   const [upper, setUpper] = useState(false);
 
@@ -65,7 +66,8 @@ const Edit = () => {
       color: hexColor,
       font: font,
       opacityColor: opacityColor,
-      upper: upper
+      upper: upper,
+      filter: filter
     })
   }
 
@@ -142,6 +144,11 @@ const Edit = () => {
             accept="video/*"
             onChange={renderVideo}
           />
+          <br />
+          <div className={styles.filterVideo}>
+            <input type="checkbox" name="filterVideo" id='filterVideo' />
+            <label htmlFor="filterVideo">Colocar filtro no vídeo</label>
+          </div>
         </div>
         <div className={styles.other_input}>
           <label htmlFor="btn_hex">Cor Hexadecimal:</label>

@@ -2,10 +2,12 @@ import styles from './Home.module.css'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-
 //USECONTEXT
 import { useContext } from 'react';
 import { SettingsWatchContext } from '../context/HookUseContext'
+
+//COMPONENTS
+import Filter from '../components/Filter';
 
 //UTILS
 import UpperCase from '../utils/UpperCase';
@@ -37,11 +39,10 @@ const Home = () => {
 
 	}, [totalTimeInSeconds]);
 
-	useEffect(() => {
-		console.log(watchState.fileVideo)
-	}, []);
+
 	return (
 		<div className={styles.container}>
+			<Filter filterCheck={false} ></Filter>
 			<video src={watchState.fileVideo} autoPlay loop muted />
 			<div className={styles.controls}>
 				<div className={styles.slogan}>
