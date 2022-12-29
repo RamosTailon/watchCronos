@@ -26,5 +26,5 @@ Lista de tarefas:
 - [x] Opção de texto em caixa alta.
 - [x] Configurar vídeo de fundo.
 - [x] Função de filtro de vídeo.
-- [ ] Animação de cor nos 10 segundos finais.
+- [x] Animação de cor nos 10 segundos finais.
 - [ ] Criar a função de play e pause do cronômetro.

@@ -58,16 +58,15 @@
 
 .timer {
     text-align: center;
-
     font-size: 5rem;
     width: 60%;
     background-color: var(--color-btn);
     border-radius: 10px;
 }
 
-.timer span {
-    color: var(--color-text-btn);
-}
+/* .timer span {
+    color: red;
+} */
 
 .editZone {
     z-index: 6;

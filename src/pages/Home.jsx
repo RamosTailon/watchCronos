@@ -11,6 +11,7 @@ import { SettingsWatchContext } from '../context/HookUseContext'
 
 //COMPONENTS
 import Filter from '../components/Filter';
+import Time from '../components/Time';
 
 //UTILS
 import UpperCase from '../utils/UpperCase';
@@ -51,6 +52,11 @@ const Home = () => {
 	}, [totalTimeInSeconds]);
 
 
+	let isTimeYet = true
+	if (minutes == 0 && seconds <= 10) {
+		isTimeYet = false
+	}
+
 	return (
 		<div className={styles.container}>
 			<Filter filterCheck={watchState.filter} ></Filter>
@@ -70,9 +76,9 @@ const Home = () => {
 							backgroundColor: watchState.color,
 							fontFamily: watchState.font
 						}}>
-						<span>{minutes.toString().padStart(2, "0")}</span>
-						<span>:</span>
-						<span >{seconds.toString().padStart(2, "0")}</span>
+						<Time animationTime={isTimeYet}>{minutes.toString().padStart(2, "0")}</Time>
+						<Time animationTime={isTimeYet}>:</Time>
+						<Time animationTime={isTimeYet}>{seconds.toString().padStart(2, "0")}</Time >
 					</div>
 				</div>
 			</div>
