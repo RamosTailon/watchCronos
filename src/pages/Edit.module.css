@@ -6,6 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background-color: #fff;
     height: 100vh;
+    margin-bottom: 75px;
 }
 
 .container h1 {
@@ -62,8 +63,13 @@
     width: 2em;
 }
 
+.filterVideo {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 30px;
+}
+
 .filterVideo input {
-    margin: 15px 10px 0px 40px;
     appearance: none;
     background-color: #e2e2e2;
     width: 25px;
@@ -71,7 +77,33 @@
     border: 1px solid #353535;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
 
+}
+
+.filterVideo input::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00c';
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+.filterVideo:hover input {
+    background-color: #b8b8b8;
+    ;
+}
+
+.filterVideo input:checked {
+    background-color: #52B737;
+}
+
+.filterVideo input:checked::after {
+    display: block;
 }
 
 .filterVideo label {
@@ -91,10 +123,15 @@
 }
 
 .spectrum_map p {
-    width: 50px;
+    width: 75px;
     height: 50px;
     background-color: purple;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
 }
 
 .other_input {
@@ -120,8 +157,9 @@
 
 #subtitle {
     text-align: center;
-    color: #4d4d4dff;
+    color: white;
     border: 1px #4d4d4dff solid;
     margin: 0;
     padding: 10px 0;
+    border-radius: 8px;
 }

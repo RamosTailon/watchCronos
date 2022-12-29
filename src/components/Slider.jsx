@@ -13,7 +13,8 @@ const Slider = styled.input`
         -webkit-appearance: none;
         width: 25px;
         height: 25px;
-        background: #2b2b2b;
+        background: #fff;
+        border: 5px solid #2b2b2b;
         border-radius: 50%;
     }
 `

@@ -1,6 +1,9 @@
 import styles from './Home.module.css'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+
 
 //USECONTEXT
 import { useContext } from 'react';
@@ -25,8 +28,11 @@ const Home = () => {
 	const minutes = Math.floor(totalTimeInSeconds / 60);
 	const seconds = totalTimeInSeconds % 60
 
-	useEffect(() => {
+	function playPause(partTimer) {
+		clearInterval(partTimer)
+	}
 
+	function startChronos() {
 		if (totalTimeInSeconds === 0) {
 			return
 		} else {
@@ -34,6 +40,13 @@ const Home = () => {
 				setTotalTimeInSeconds(totalTimeInSeconds - 1)
 			}, 1000)
 		}
+	}
+
+	useEffect(() => {
+
+		startChronos()
+
+
 
 		// return () => clearTimeout(timer) //Cleanup não é necessário
 
@@ -42,7 +55,7 @@ const Home = () => {
 
 	return (
 		<div className={styles.container}>
-			<Filter filterCheck={false} ></Filter>
+			<Filter filterCheck={watchState.filter} ></Filter>
 			<video src={watchState.fileVideo} autoPlay loop muted />
 			<div className={styles.controls}>
 				<div className={styles.slogan}>
@@ -67,7 +80,14 @@ const Home = () => {
 			</div>
 			<div className={styles.editZone}>
 				<Link to='/edit' className={styles.btn_edit} style={{ backgroundColor: watchState.color }}>Editar </Link>
-				<button className={styles.btn_playPause} style={{ backgroundColor: watchState.color }}> Play / Pause</button>
+				<button
+					className={styles.btn_playPause}
+					style={{ backgroundColor: watchState.color }}
+					onClick={playPause}
+				>
+					<FontAwesomeIcon icon={faPlay} />
+					<FontAwesomeIcon icon={faPause} />
+				</button>
 			</div>
 
 		</div >

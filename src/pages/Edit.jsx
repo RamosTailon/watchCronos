@@ -146,12 +146,17 @@ const Edit = () => {
           />
           <br />
           <div className={styles.filterVideo}>
-            <input type="checkbox" name="filterVideo" id='filterVideo' />
+            <input
+              type="checkbox"
+              name="filterVideo"
+              id='filterVideo'
+              onChange={(e) => setFilter(e.target.checked)}
+            />
             <label htmlFor="filterVideo">Colocar filtro no vídeo</label>
           </div>
         </div>
         <div className={styles.other_input}>
-          <label htmlFor="btn_hex">Cor Hexadecimal:</label>
+          <label htmlFor="btn_hex">Cor dos botões:</label>
           <div className={styles.spectrum_map}>
             <input
               type="color"
@@ -162,7 +167,7 @@ const Edit = () => {
             <p style={{
               backgroundColor: color,
               opacity: opacityColor
-            }}></p>
+            }}> 05:00</p>
             <Slider
               color={color}
               type="range"
@@ -187,7 +192,11 @@ const Edit = () => {
             <option value={font3}>Fonte 3</option>
           </select>
         </div>
-        <h3 id={styles.subtitle} style={{ fontFamily: font }}>{UpperCase(text, upper)}</h3>
+        <h3 id={styles.subtitle} style={{
+          fontFamily: font,
+          backgroundColor: color,
+          opacity: opacityColor
+        }}>{UpperCase(text, upper)}</h3>
         <div className="maiúsculo">
           <input type="checkbox" name="maiúsculo" id="maiúsculo" onChange={(e) => setUpper(e.target.checked)} /> <label htmlFor="maiúsculo"> Maiúsculo</label>
         </div>

@@ -11,6 +11,7 @@ as TECNOLOGIAS usadas foram:
 * yarn
 * vite (BUILD)
 * styled-components //css escopado
+* Font Awesome (React.js)
 
 --------------------------------------------------------------
 Lista de tarefas:
@@ -24,6 +25,6 @@ Lista de tarefas:
 - [x] Criar contexto de informações do formulário.
 - [x] Opção de texto em caixa alta.
 - [x] Configurar vídeo de fundo.
-- [ ] Função de filtro de vídeo.
+- [x] Função de filtro de vídeo.
 - [ ] Animação de cor nos 10 segundos finais.
 - [ ] Criar a função de play e pause do cronômetro.
