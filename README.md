@@ -4,6 +4,10 @@ Este é um projeto de Cronômetro que possui um background de fundo totalmente p
 
 ### Ideal para criar expectativa antes de algumas apresentações
 
+![Preview do projeto](./public/cronometro1.png)
+![Página de edição](./public/cronometro2.png)
+
+
 as TECNOLOGIAS usadas foram:
 
 * React.js
