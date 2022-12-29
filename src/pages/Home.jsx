@@ -46,8 +46,6 @@ const Home = () => {
 
 		startChronos()
 
-
-
 		// return () => clearTimeout(timer) //Cleanup não é necessário
 
 	}, [totalTimeInSeconds]);
