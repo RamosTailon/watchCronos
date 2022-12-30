@@ -31,4 +31,4 @@ Lista de tarefas:
 - [x] Configurar vídeo de fundo.
 - [x] Função de filtro de vídeo.
 - [x] Animação de cor nos 10 segundos finais.
-- [ ] Criar a função de play e pause do cronômetro.
+- [x] Criar a função de play e pause do cronômetro.

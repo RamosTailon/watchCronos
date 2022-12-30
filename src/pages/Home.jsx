@@ -29,29 +29,55 @@ const Home = () => {
 	const minutes = Math.floor(totalTimeInSeconds / 60);
 	const seconds = totalTimeInSeconds % 60
 
-	function playPause(partTimer) {
-		clearInterval(partTimer)
-	}
+	var timer
 
 	function startChronos() {
 		if (totalTimeInSeconds === 0) {
 			return
 		} else {
-			const timer = setTimeout(() => {
+			timer = setTimeout(() => {
 				setTotalTimeInSeconds(totalTimeInSeconds - 1)
 			}, 1000)
 		}
+		return timer
 	}
 
-	useEffect(() => {
 
+
+	useEffect(() => {
 		startChronos()
+
 
 		// return () => clearTimeout(timer) //Cleanup não é necessário
 
 	}, [totalTimeInSeconds]);
 
+	//PLAY AND PAUSE
+	const [playPause, setPlayPause] = useState(false);
 
+	function stopGo() {
+		if (playPause) {
+			setPlayPause(false)
+			startChronos()
+
+		} else {
+			setPlayPause(true)
+			clearTimeout(timer)
+		}
+	}
+
+
+
+	//FEATURE
+	/*useEffect(() => {
+		if (!playPause) {
+			console.count(playPause) //contar as pausas
+			// lógica de contagem de pausas
+		}
+	}, [playPause]);*/
+
+
+	//COLOR TIME
 	let isTimeYet = true
 	if (minutes == 0 && seconds <= 10) {
 		isTimeYet = false
@@ -87,7 +113,7 @@ const Home = () => {
 				<button
 					className={styles.btn_playPause}
 					style={{ backgroundColor: watchState.color }}
-					onClick={playPause}
+					onClick={stopGo}
 				>
 					<FontAwesomeIcon icon={faPlay} />
 					<FontAwesomeIcon icon={faPause} />
