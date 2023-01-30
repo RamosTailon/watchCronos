@@ -35,7 +35,7 @@ a parte mais fácil foi estruturar o estilo css e compartilha-lo com styled-comp
 <p>Preview do projeto</p>
 
 <p  align="center">
-  <img width="600px" src="./public/cronometro2.png" align="center"></img>
+  <img height="850px" src="./public/cronometro2.png" align="center"></img>
 </p>
 <p>Página de edição</p>
 
