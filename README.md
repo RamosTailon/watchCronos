@@ -41,7 +41,7 @@ a parte mais fácil foi estruturar o estilo css e compartilha-lo com styled-comp
 
 # :heavy_check_mark: Links <a name="id04"></a>
 
-- Link para acessar: LINK
+- Link para acessar: https://watchchronos.netlify.app/
 
 # 🛠 Feito com <a name="id05"></a>
 
